@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    for persona in ris
+        form(name="remove", method='post' action='/remove/' + persona.id)
+            div.actions
+            input(type="submit", value='Rimuovi')
+        p #{'| Nome: ' + persona.nome + ' | ' + 'Cognome: ' + persona.cognome + ' | ' + 'Data di nascita: ' + persona.dataDiNascita.substring(0,10) + ' |'}
+    form(name="index", method="get" action='/')
+        div.actions
+            input(type="submit", value="Indietro")
+    form(name="removeAll", method='get' action='/removeAll')
+        div.actions
+            input(type="submit", value="Rimuovi tutto")

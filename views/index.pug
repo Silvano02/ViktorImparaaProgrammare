@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  form(name="persona", method="post" action='/Inserisci')
+    div.input
+      span.label Nome:
+      input(type="text", name="nome")
+      span.label Cognome:
+      input(type="text", name="cognome")
+      span.label Data di nascita:
+      input(type="date", name="dob")
+    div.actions
+      input(type="submit", value="add")
+  form(name="getAll", method="get" action='/getAll')
+     div.actions
+       input(type="submit", value="Vedi tutti")
+       input(type="hidden",
+

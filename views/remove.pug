@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= 'Rimossa riga con id ' + id
+    form(name="getAll", method="get" action='/getAll')
+        div.actions
+            input(type="submit", value="Vedi tutti")
+    form(name="index", method="get" action='/')
+        div.actions
+            input(type="submit", value="Torna alla home")
